@@ -10,6 +10,7 @@ COPY . .
 RUN npm run build 
 
 
+
 FrOM nginx
 EXPOSE 80
 COPY --from=build_phase /app/build/ /usr/share/nginx/html
